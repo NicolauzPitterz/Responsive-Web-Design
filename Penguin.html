@@ -7,11 +7,17 @@
     <title>Penguin</title>
 
     <style>
-        .penguin {
+        :root {
             --penguin-skin: black;
-            --penguin-belly: white;
             --penguin-beak: yellow;
+        }
 
+        body{
+            background: var(--penguin-belly, deepskyblue);
+        }
+
+        .penguin {
+            --penguin-belly: white;
             position: relative;
             margin: auto;
             display: block;
@@ -156,9 +162,6 @@
             border-radius: 50%;
         }
         
-        body{
-            background: deepskyblue;
-        }
 
         .penguin * {
             position: absolute;
