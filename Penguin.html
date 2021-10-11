@@ -10,6 +10,13 @@
         :root {
             --penguin-skin: black;
             --penguin-beak: yellow;
+            --penguin-size: 300px;
+        }
+        
+        @media (max-width: 350px) {
+            :root {
+                --penguin-size: 200px;
+            }
         }
 
         body{
@@ -22,8 +29,8 @@
             margin: auto;
             display: block;
             margin-top: 5%;
-            width: 300px;
-            height: 300px;
+            width: var(--penguin-size, 300px);
+            height: var(--penguin-size, 300px);;
         }
         .p-top {
             top: 10%;
@@ -43,13 +50,33 @@
         }
         .rHand {
             top: 0%;
-            left: -5%;
+            left: 25%;
             background: var(--penguin-skin, black);
             width: 30%;
             height: 60%;
-            transform: rotate(45deg);
+            transform: rotate(130deg);
             border-radius: 30% 30% 120% 30%;
             z-index: -1;
+            animation-name: wave;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transform-origin: 0% 0%;
+            animation-timing-function: linear;
+        }
+
+        @keyframes wave {
+            10% {
+                transform: rotate(110deg);
+            }
+            20% {
+                transform: rotate(130deg);
+            }
+            30% {
+                transform: rotate(110deg);
+            }
+            40% {
+                transform: rotate(130deg);
+            }
         }
         .lHand {
             top: 0%;
