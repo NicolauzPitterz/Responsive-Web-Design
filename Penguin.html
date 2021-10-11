@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin</title>
+
+    <style>
+        .penguin {
+            --penguin-skin: black;
+            --penguin-belly: white;
+            --penguin-beak: yellow;
+
+            position: relative;
+            margin: auto;
+            display: block;
+            margin-top: 5%;
+            width: 300px;
+            height: 300px;
+        }
+        .p-top {
+            top: 10%;
+            left: 25%;
+            background: var(--penguin-skin, black);
+            width: 50%;
+            height: 45%;
+            border-radius: 70% 70% 60% 60%;
+        }
+        .p-bot {
+            top: 40%;
+            left: 23.5%;
+            background: var(--penguin-skin, black);
+            width: 53%;
+            height: 45%;
+            border-radius: 70% 70% 100% 100%;
+        }
+        .rHand {
+            top: 0%;
+            left: -5%;
+            background: var(--penguin-skin, black);
+            width: 30%;
+            height: 60%;
+            transform: rotate(45deg);
+            border-radius: 30% 30% 120% 30%;
+            z-index: -1;
+        }
+        .lHand {
+            top: 0%;
+            left: 75%;
+            background: var(--penguin-skin, black);
+            width: 30%;
+            height: 60%;
+            transform: rotate(-45deg);
+            border-radius: 30% 30% 30% 120%;
+            z-index: -1;
+        }
+        .rCheek {
+            top: 15%;
+            left: 35%;
+            width: 60%;
+            height: 70%;
+            background: var(--penguin-belly, white);
+            border-radius: 70% 70% 60% 60%;
+        }
+        .lCheek {
+            top: 15%;
+            left: 5%;
+            width: 60%;
+            height: 70%;
+            background: var(--penguin-belly, white);
+            border-radius: 70% 70% 60% 60%;
+        }
+        .belly {
+            top: 60%;
+            left: 2.5%;
+            width: 95%;
+            height: 100%;
+            background: var(--penguin-belly, white);
+            border-radius: 120% 120% 100% 100%;
+        }
+        .rFeet {
+            top: 85%;
+            left: 25%;
+            width: 15%;
+            height: 30%;
+            background: var(--penguin-beak, yellow);
+            border-radius: 50% 50% 50% 50%;
+            transform: rotate(80deg);
+            z-index: -2222;
+        }
+        .lFeet {
+            top: 85%;
+            left: 60%;
+            width: 15%;
+            height: 30%;
+            background: var(--penguin-beak, yellow);
+            border-radius: 50% 50% 50% 50%;
+            transform: rotate(-80deg);
+            z-index: -2222;
+        }
+        .rEye {
+            top: 45%;
+            left: 60%;
+            width: 15%;
+            height: 17%;
+            background: black;
+            border-radius: 50%;
+        }
+        .lEye {
+            top: 45%;
+            left: 25%;
+            width: 15%;
+            height: 17%;
+            background: black;
+            border-radius: 50%;
+        }
+        .sparkle {
+            top: 25%;
+            left: 15%;
+            width: 35%;
+            height: 35%;
+            background: white;
+            border-radius: 50%;
+        }
+        .rBlush {
+            top: 65%;
+            left: 15%;
+            width: 15%;
+            height: 10%;
+            background: pink;
+            border-radius: 50%;
+        }
+        .lBlush {
+            top: 65%;
+            left: 70%;
+            width: 15%;
+            height: 10%;
+            background: pink;
+            border-radius: 50%;
+        }
+        .topBeak {
+            top: 60%;
+            left: 40%;
+            width: 20%;
+            height: 10%;
+            background: var(--penguin-beak, yellow);
+            border-radius: 50%;
+        }
+        .botBeak {
+            top: 65%;
+            left: 42%;
+            width: 16%;
+            height: 10%;
+            background: var(--penguin-beak, yellow);
+            border-radius: 50%;
+        }
+        
+        body{
+            background: deepskyblue;
+        }
+
+        .penguin * {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="penguin">
+        <div class="p-bot">
+            <div class="rHand"></div>
+            <div class="lHand"></div>
+            <div class="rFeet"></div>
+            <div class="lFeet"></div>
+        </div>
+        <div class="p-top">
+            <div class="rCheek"></div>
+            <div class="lCheek"></div>
+            <div class="belly"></div>
+            <div class="rEye">
+                <div class="sparkle"></div>
+            </div>
+            <div class="lEye">
+                <div class="sparkle"></div>
+            </div>
+            <div class="rBlush"></div>
+            <div class="lBlush"></div>
+            <div class="topBeak"></div>
+            <div class="botBeak"></div>
+        </div>
+    </div>
+</body>
+</html>
